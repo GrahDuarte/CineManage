@@ -96,6 +96,12 @@ public class Cinema extends Entity {
     }
     
     */
+    
+    @Override
+    public String toString(){
+        return "nomeFantasia : " + this.nomeFantasia + "\n" +
+                "cnpj : " + this.cnpj + "\n";
+    }
 }
 
 

@@ -6,7 +6,10 @@ package models;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import repository.Dao;
 import repository.IDao;
 
@@ -14,7 +17,7 @@ import repository.IDao;
  *
  * @author Warley Ramires
  */
-public class CinemaDao extends Dao {
+public abstract class CinemaDao extends Dao<Cinema> {
     
     public static final String TABLE = "cinema";
     
@@ -34,7 +37,7 @@ public class CinemaDao extends Dao {
     }
 
     @Override
-    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Object e) {
+    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Cinema e) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -48,39 +51,21 @@ public class CinemaDao extends Dao {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    // Funcao responsavel por buscar um cinema no banco de dados e construir esse objeto na memoria
     @Override
-    public String getMoveToTrashStatement() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Cinema extractObject(ResultSet rs){
+        Cinema cin = new Cinema();
+        try {
+            while(rs.next()){
+                cin.setNomeFantasia(rs.getString("nomeFantasia"));
+                cin.setCnpj(rs.getLong("cnpj"));
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(CinemaDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return cin;
     }
 
-    @Override
-    public void moveToTrash(Object e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
-    @Override
-    public String getRestoreFromTrashStatement() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void restoreFromTrash(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public String getFindAllOnTrashStatement() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public List findAllOnTrash() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public Object extractObject(ResultSet resultSet) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
 }
