@@ -15,15 +15,22 @@ import repository.IDao;
  * @author Warley Ramires
  */
 public class CinemaDao extends Dao {
+    
+    public static final String TABLE = "cinema";
+    
 
     @Override
     public String getSaveStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        return "insert into " + TABLE + "(nomeFantasia, cnpj, endereco, telefone, sigla, salas) values (?, ?, ?, ?, ?, ?, ?)";
     }
 
     @Override
     public String getUpdateStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        return "update " + TABLE + "set nomeFantasia = ?, cnpj = ?, endereco = ?, telefone = ?, sigla = ?, salas = ? where id = ?";
+        
+        //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
