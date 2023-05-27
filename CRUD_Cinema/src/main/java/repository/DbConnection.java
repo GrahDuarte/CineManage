@@ -38,7 +38,7 @@ public class DbConnection {
                 + "&serverTimezone=UTC"
                 + "&autoReconnect=true";
         USER = "root";
-        PASSWORD = "";
+        PASSWORD = "wRamires1997";
     }
 
     //<editor-fold defaultstate="collapsed" desc="Construtor privado">

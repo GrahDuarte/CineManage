@@ -89,10 +89,16 @@ public abstract class Dao<T>
                     // Retrieve the returned primary key
                     id = resultSet.getLong(1);
                 }
-
+                
+                System.out.println("Salvou");
+               
             } catch (Exception ex) {
                 System.out.println(">> " + ex);
+                 System.out.println("CHEGOU ATÉ AQUI");
+
             }
+            
+            
 
         } else {
             // Update existing record
@@ -111,12 +117,12 @@ public abstract class Dao<T>
 
                 // Keep the primary key
                 id = ((Entity) e).getId();
-
+               
             } catch (Exception ex) {
                 System.out.println("Exception: " + ex);
             }
         }
-
+       
         return id;
     }
 

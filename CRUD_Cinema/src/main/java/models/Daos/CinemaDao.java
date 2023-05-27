@@ -41,7 +41,7 @@ public class CinemaDao extends Dao<Cinema> {
     @Override
     public String getSaveStatment() {
         
-        return "insert into " + TABLE + "(nomeFantasia, cnpj, endereco, telefone, sigla, salas) values (?, ?, ?, ?, ?, ?, ?)";
+        return "insert into " + TABLE + "(nomeFantasia, cnpj, endereco, telefone, sigla) values (?, ?, ?, ?, ?)";
     }
 
     @Override
@@ -53,26 +53,36 @@ public class CinemaDao extends Dao<Cinema> {
 
     @Override
     public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Cinema e) {
-        /* try {
-            pstmt.setString(1, e.getDescription());
-            // OR
-            // pstmt.setObject(1, e.getDescription(), java.sql.Types.VARCHAR);
+        try {
+//            pstmt.setString(1, e.getNomeFantasia());
+//            // OR
+//            // pstmt.setObject(1, e.getDescription(), java.sql.Types.VARCHAR);
+//
+//            // Null values
+//            // NOT! pstmt.setByte(2, e.getProgress());
+//            pstmt.setObject(2, e.getProgress(), java.sql.Types.TINYINT);
+//
+//            // LocalDate
+//            pstmt.setObject(3, e.getConclusion(), java.sql.Types.DATE);
+//
+//            // Just for the update
+//            if (e.getId() != null) {
+//                pstmt.setLong(4, e.getId());
+//            }
 
-            // Null values
-            // NOT! pstmt.setByte(2, e.getProgress());
-            pstmt.setObject(2, e.getProgress(), java.sql.Types.TINYINT);
-
-            // LocalDate
-            pstmt.setObject(3, e.getConclusion(), java.sql.Types.DATE);
-
-            // Just for the update
-            if (e.getId() != null) {
-                pstmt.setLong(4, e.getId());
-            }
+                pstmt.setString(1, e.getNomeFantasia());
+                pstmt.setLong(2, e.getCnpj());
+                pstmt.setObject(3, e.getEndereco());
+                pstmt.setLong(4, e.getTelefone());
+                pstmt.setString(5, e.getSigla());
+                
+                 if (e.getId() != null) {
+                    pstmt.setLong(7, e.getId());
+        }
 
         } catch (SQLException ex) {
-            Logger.getLogger(TaskDao.class.getName()).log(Level.SEVERE, null, ex);
-        } */
+            Logger.getLogger(CinemaDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @Override
