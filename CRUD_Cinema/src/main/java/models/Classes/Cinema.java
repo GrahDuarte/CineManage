@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package models;
+package models.Classes;
 
 import entity.Entity;
 import java.util.ArrayList;
+//import models.Sala;
 
 /**
  *
@@ -18,19 +19,19 @@ public class Cinema extends Entity {
     private Endereco endereco;
     private long telefone;
     private String sigla;
-    private ArrayList<Sala> salas;
+    //private ArrayList<Sala> salas;
 
     public Cinema() {
-        salas = new ArrayList<>();
+        //salas = new ArrayList<>();
     }
 
-    public Cinema(String nomeFantasia, long cnpj, Endereco endereco, long telefone, String sigla, ArrayList<Sala> salas) {
+    public Cinema(String nomeFantasia, long cnpj, Endereco endereco, long telefone, String sigla /*ArrayList<Sala> salas*/) {
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
         this.endereco = endereco;
         this.telefone = telefone;
         this.sigla = sigla;
-        this.salas = salas;
+        //this.salas = salas;
     }
 
     public String getNomeFantasia() {
@@ -42,7 +43,19 @@ public class Cinema extends Entity {
     }
 
     public long getCnpj() {
-        return cnpj;
+        
+        
+      /* 
+        String cnpjFormatado = this.cnpj;
+    try {
+        MaskFormatter mask = new MaskFormatter("###.###.###/####-##");
+        mask.setValueContainsLiteralCharacters(false);
+        System.out.println("CNPJ : " + mask.valueToString(cnpj));
+    } catch (ParseException ex) {
+        Logger.getLogger(ControlMain.class.getName()).log(Level.SEVERE, null, ex);
+    }*/
+    
+    return cnpj;
     }
 
     public void setCnpj(long cnpj) {
@@ -73,21 +86,21 @@ public class Cinema extends Entity {
         this.sigla = sigla;
     }
 
-    public ArrayList<Sala> getSala() {
-        return salas;
-    }
-
-    public void setSala(ArrayList<Sala> salas) {
-        this.salas = salas;
-    }
-    
-    public void cadastrarSala(Sala sala){
-        salas.add(sala);
-    }
-    
-    public void removerSala(Sala sala){
-        salas.remove(sala);
-    }
+//    public ArrayList<Sala> getSala() {
+//        return salas;
+//    }
+//
+//    public void setSala(ArrayList<Sala> salas) {
+//        this.salas = salas;
+//    }
+//    
+//    public void cadastrarSala(Sala sala){
+//        salas.add(sala);
+//    }
+//    
+//    public void removerSala(Sala sala){
+//        salas.remove(sala);
+//    }
     
     /*
     public void venderIngresso(Ingresso ingresso){    
