@@ -25,7 +25,16 @@ public class Cinema extends Entity {
         //salas = new ArrayList<>();
     }
 
-    public Cinema(String nomeFantasia, long cnpj, Endereco endereco, long telefone, String sigla /*ArrayList<Sala> salas*/) {
+    public Cinema(Long id, String nomeFantasia, long cnpj, Endereco endereco, long telefone, String sigla /*ArrayList<Sala> salas*/) {
+        
+        setId(id);
+        
+        setNomeFantasia(nomeFantasia);
+        setCnpj(cnpj);
+        setEndereco(endereco);
+        setTelefone(telefone);
+        setSigla(sigla);
+        
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
         this.endereco = endereco;

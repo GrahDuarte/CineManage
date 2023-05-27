@@ -14,7 +14,7 @@ import repository.Dao;
  * 
  * <code>
  * CREATE TABLE Endereco (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     pais VARCHAR(100) NOT NULL,
     estado VARCHAR(100) NOT NULL,
     cidade VARCHAR(100) NOT NULL,
@@ -26,10 +26,12 @@ import repository.Dao;
  * @author Warley Ramires
  */
 public class EnderecoDao extends Dao<Endereco>{
+    
+    public static final String TABLE = "Tarefa";
 
     @Override
     public String getSaveStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       return "insert into " + TABLE + "(pais, estado, cidade, bairro, logradouro)  values (?, ?, ?, ?, ?)";
     }
 
     @Override

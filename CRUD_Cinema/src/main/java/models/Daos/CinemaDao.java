@@ -33,7 +33,7 @@ import repository.IDao;
  * </code>
  * @author Warley Ramires
  */
-public abstract class CinemaDao extends Dao<Cinema> {
+public class CinemaDao extends Dao<Cinema> {
     
     public static final String TABLE = "cinema";
     

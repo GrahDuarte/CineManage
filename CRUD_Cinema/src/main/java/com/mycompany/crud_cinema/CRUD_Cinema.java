@@ -7,6 +7,7 @@ package com.mycompany.crud_cinema;
 import java.util.ArrayList;
 import models.Classes.Cinema;
 import models.Classes.Endereco;
+import models.Daos.CinemaDao;
 //import models.Sala;
 
 /**
@@ -26,12 +27,16 @@ public class CRUD_Cinema {
 //        salas.add(sala2);
 
  // Criando um objeto Cinema
-        Cinema cinema = new Cinema("CineCity", 1234567890L, endereco, 9876543210L, "CC");
-System.out.println("Nome Fantasia: " + cinema.getNomeFantasia());
+        Cinema cinema = new Cinema(null, "CineCity", 1234567890L, endereco, 9876543210L, "CC");
+        System.out.println("Nome Fantasia: " + cinema.getNomeFantasia());
         System.out.println("CNPJ: " + cinema.getCnpj());
         System.out.println("Endereço: " + cinema.getEndereco());
         System.out.println("Telefone: " + cinema.getTelefone());
         System.out.println("Sigla: " + cinema.getSigla());
      //   System.out.println("Salas: " + cinema.getSalas());
+     
+     //Salvar no banco de dados
+     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
+     cinema.setId(cinemaId);
     }
 }
