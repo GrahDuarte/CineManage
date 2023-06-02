@@ -53,7 +53,7 @@ import java.util.logging.Logger;
 public abstract class Dao<T>
         implements IDao<T> {
 
-    public static final String DB = "sistemacinema";
+    public static final String DB = "freedb_sistemacinema";
 
     @Override
     public Long saveOrUpdate(T e) {

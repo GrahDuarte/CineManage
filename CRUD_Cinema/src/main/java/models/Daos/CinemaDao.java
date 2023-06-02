@@ -41,7 +41,7 @@ public class CinemaDao extends Dao<Cinema> {
     @Override
     public String getSaveStatment() {
         
-        return "insert into " + TABLE + "(nomeFantasia, cnpj, endereco, telefone, sigla) values (?, ?, ?, ?, ?)";
+        return "insert into " + TABLE + "(nomeFantasia, cnpj, endereco_id, telefone, sigla) values (?, ?, ?, ?, ?)";
     }
 
     @Override
@@ -72,7 +72,7 @@ public class CinemaDao extends Dao<Cinema> {
 
                 pstmt.setString(1, e.getNomeFantasia());
                 pstmt.setLong(2, e.getCnpj());
-                pstmt.setObject(3, e.getEndereco());
+                pstmt.setObject(3, 1);
                 pstmt.setLong(4, e.getTelefone());
                 pstmt.setString(5, e.getSigla());
                 
