@@ -72,7 +72,7 @@ public class CinemaDao extends Dao<Cinema> {
 
                 pstmt.setString(1, e.getNomeFantasia());
                 pstmt.setLong(2, e.getCnpj());
-                pstmt.setObject(3, e.getEndereco());
+                pstmt.setObject(3, NULL);
                 pstmt.setLong(4, e.getTelefone());
                 pstmt.setString(5, e.getSigla());
                 
