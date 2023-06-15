@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 /**
  * Class DbConnection
  *
- * @author ;
+ * @author Luis Guisso &lt;luis dot guisso at ifnmg dot edu dot br&gt;
  * @version 0.1, 2022-10-24
  */
 public class DbConnection {
