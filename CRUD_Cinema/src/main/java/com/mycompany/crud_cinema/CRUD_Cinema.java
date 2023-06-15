@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import models.Classes.Cinema;
 import models.Classes.Endereco;
 import models.Daos.CinemaDao;
+import models.Daos.EnderecoDao;
 //import models.Sala;
 
 /**
@@ -36,6 +37,7 @@ public class CRUD_Cinema {
      //   System.out.println("Salas: " + cinema.getSalas());
      
      //Salvar no banco de dados
+     //Long enderecoId = new EnderecoDao.saveOrUpdate(cinema.getEndereco());
      Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
      cinema.setId(cinemaId);
     }
