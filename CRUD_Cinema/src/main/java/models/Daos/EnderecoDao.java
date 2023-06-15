@@ -2,61 +2,123 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package models.Daos;
+package models.Classes;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import models.Classes.Endereco;
-import repository.Dao;
+import entity.Entity;
+import java.util.ArrayList;
+//import models.Sala;
 
 /**
- * Classe EnderecoDao
- * 
- * <code>
- * CREATE TABLE Endereco (
-    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    pais VARCHAR(100) NOT NULL,
-    estado VARCHAR(100) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    bairro VARCHAR(100) NOT NULL,
-    logradouro VARCHAR(100) NOT NULL
-);
- * </code>
- * 
+ *
  * @author Warley Ramires
  */
-public class EnderecoDao extends Dao<Endereco>{
+public class Cinema extends Entity {
     
-    public static final String TABLE = "Tarefa";
+    private String nomeFantasia;
+    private long cnpj;
+    private Endereco endereco;
+    private long telefone;
+    private String sigla;
+    //private ArrayList<Sala> salas;
 
-    @Override
-    public String getSaveStatment() {
-       return "insert into " + TABLE + "(pais, estado, cidade, bairro, logradouro)  values (?, ?, ?, ?, ?)";
+    public Cinema() {
+        //salas = new ArrayList<>();
     }
 
-    @Override
-    public String getUpdateStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Cinema(Long id, String nomeFantasia, long cnpj, Endereco endereco, long telefone, String sigla /*ArrayList<Sala> salas*/) {
+        
+        setId(id);
+        
+        this.nomeFantasia = nomeFantasia;
+        this.cnpj = cnpj;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.sigla = sigla;
+        //this.salas = salas;
     }
 
-    @Override
-    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Endereco e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String getNomeFantasia() {
+        return nomeFantasia;
     }
 
-    @Override
-    public String getFindByIdStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setNomeFantasia(String nomeFantasia) {
+        this.nomeFantasia = nomeFantasia;
     }
 
-    @Override
-    public String getFindAllStatment() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public long getCnpj() {
+        
+        
+      /* 
+        String cnpjFormatado = this.cnpj;
+    try {
+        MaskFormatter mask = new MaskFormatter("###.###.###/####-##");
+        mask.setValueContainsLiteralCharacters(false);
+        System.out.println("CNPJ : " + mask.valueToString(cnpj));
+    } catch (ParseException ex) {
+        Logger.getLogger(ControlMain.class.getName()).log(Level.SEVERE, null, ex);
+    }*/
+    
+    return cnpj;
     }
 
-    @Override
-    public Endereco extractObject(ResultSet resultSet) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public void setCnpj(long cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public long getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(long telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+//    public ArrayList<Sala> getSala() {
+//        return salas;
+//    }
+//
+//    public void setSala(ArrayList<Sala> salas) {
+//        this.salas = salas;
+//    }
+//    
+//    public void cadastrarSala(Sala sala){
+//        salas.add(sala);
+//    }
+//    
+//    public void removerSala(Sala sala){
+//        salas.remove(sala);
+//    }
+    
+    /*
+    public void venderIngresso(Ingresso ingresso){    
+    }
+    public void venderProdutosBombonieire(Int venda){
     }
     
+    */
+    
+    @Override
+    public String toString(){
+        return "nomeFantasia : " + this.nomeFantasia + "\n" +
+                "cnpj : " + this.cnpj + "\n";
+    }
 }
+
+
+
