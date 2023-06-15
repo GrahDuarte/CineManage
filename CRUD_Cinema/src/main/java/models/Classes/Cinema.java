@@ -29,12 +29,6 @@ public class Cinema extends Entity {
         
         setId(id);
         
-        setNomeFantasia(nomeFantasia);
-        setCnpj(cnpj);
-        setEndereco(endereco);
-        setTelefone(telefone);
-        setSigla(sigla);
-        
         this.nomeFantasia = nomeFantasia;
         this.cnpj = cnpj;
         this.endereco = endereco;
