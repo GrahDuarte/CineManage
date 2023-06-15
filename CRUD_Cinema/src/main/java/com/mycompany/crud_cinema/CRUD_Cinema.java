@@ -38,7 +38,7 @@ public class CRUD_Cinema {
      
      //Salvar no banco de dados
      //Long enderecoId = new EnderecoDao.saveOrUpdate(cinema.getEndereco());
-     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
-     cinema.setId(cinemaId);
+//     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
+//     cinema.setId(cinemaId);
     }
 }
