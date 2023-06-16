@@ -37,8 +37,8 @@ public class DbConnection {
                 + "&useJDBCCompliantTimezoneShift=true"
                 + "&serverTimezone=UTC"
                 + "&autoReconnect=true";
-        USER = "freedb_claudio";
-        PASSWORD = "zaZcv4KC%HXHuvf";
+        USER = "freedb_pooif";
+        PASSWORD = "QH@8D6EG5CYqKsn";
     }
 
     //<editor-fold defaultstate="collapsed" desc="Construtor privado">

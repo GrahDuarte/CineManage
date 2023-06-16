@@ -19,7 +19,7 @@ public class CRUD_Cinema {
 
     public static void main(String[] args) {
          // Criando um objeto Endereco
-        Endereco endereco = new Endereco("Brasil", "São Paulo", "São Paulo", "Centro", "Rua Principal");
+        Endereco endereco = new Endereco(null, "Brasil", "São Paulo", "São Paulo", "Centro", "Rua Principal", 10, "SC");
     
        // ArrayList<Sala> salas = new ArrayList<>();
 //        Sala sala1 = new Sala(1, 100);
@@ -27,6 +27,9 @@ public class CRUD_Cinema {
 //        salas.add(sala1);
 //        salas.add(sala2);
 
+//Salvar no banco de dados
+     Long enderecoId = new EnderecoDao().saveOrUpdate(endereco);
+     endereco.setId(enderecoId);
  // Criando um objeto Cinema
         Cinema cinema = new Cinema(null, "CineCity", 1234567890L, endereco, 9876543210L, "CC");
         System.out.println("Nome Fantasia: " + cinema.getNomeFantasia());
@@ -37,8 +40,8 @@ public class CRUD_Cinema {
      //   System.out.println("Salas: " + cinema.getSalas());
      
      //Salvar no banco de dados
-     //Long enderecoId = new EnderecoDao.saveOrUpdate(cinema.getEndereco());
-//     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
-//     cinema.setId(cinemaId);
+//     Long enderecoId = new EnderecoDao.saveOrUpdate(cinema.getEndereco());
+     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
+     cinema.setId(cinemaId);
     }
 }
