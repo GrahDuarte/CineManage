@@ -5,11 +5,15 @@
 package com.mycompany.crud_cinema;
 
 import java.util.ArrayList;
+import models.Classes.Ator;
 import models.Classes.Cinema;
+import models.Classes.Diretor;
 import models.Classes.Endereco;
 import models.Classes.Pais;
 import models.Classes.ProfissionalCinematografico;
+import models.Daos.AtorDao;
 import models.Daos.CinemaDao;
+import models.Daos.DiretorDao;
 import models.Daos.EnderecoDao;
 import models.Daos.PaisDao;
 import models.Daos.ProfissionalCinematograficoDao;
@@ -47,12 +51,18 @@ public class CRUD_Cinema {
 //     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
 //     cinema.setId(cinemaId);
 
-//        Pais pais = new Pais(null, "EUA");
+        Pais pais = new Pais(null, "China");
+//        Ator ator = new Ator(true, null, "JK", "JK", pais, "Masculino");
         // Salvar Pais no banco
-//        Long paisId = new PaisDao().saveOrUpdate(pais);
-//        pais.setId(paisId);
+        Long paisId = new PaisDao().saveOrUpdate(pais);
+        pais.setId(paisId);
 //        ProfissionalCinematografico profissional = new ProfissionalCinematografico(null, "JK", "JK", pais, "Masculino");
 //        Long profissionalId = new ProfissionalCinematograficoDao().saveOrUpdate(profissional);
 //        profissional.setId(profissionalId);
+//        Long atorId = new AtorDao().saveOrUpdate(ator);
+//        ator.setId(atorId);
+        Diretor diretor = new Diretor(true, false, false, null, "JK", "JK", pais, "Masculino");
+        Long diretorId = new DiretorDao().saveOrUpdate(diretor);
+        diretor.setId(diretorId);
     }
 }

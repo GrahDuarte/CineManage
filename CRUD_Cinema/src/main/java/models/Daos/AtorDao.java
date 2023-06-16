@@ -9,14 +9,15 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import models.Classes.ProfissionalCinematografico;
+import models.Classes.Ator;
 import repository.Dao;
 
 /**
  *
  * <code>
- * CREATE TABLE ProfissionalCinematografico (
+ * CREATE TABLE Ator (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    protagonista BOOLEAN NOT NULL,
     nome VARCHAR(100) NOT NULL,
     apelido VARCHAR(100),
     nacionalidade BIGINT UNSIGNED NOT NULL,
@@ -26,24 +27,24 @@ import repository.Dao;
  * </code>
  * @author lorena
  */
-public class ProfissionalCinematograficoDao extends Dao<ProfissionalCinematografico>{
+public class AtorDao extends Dao<Ator>{
     
-    public static final String TABLE = "ProfissionalCinematografico";
+    public static final String TABLE = "Ator";
 
     @Override
     public String getSaveStatment() {
-       return "insert into " + TABLE + "(nome, apelido, nacionalidade, genero)  values (?, ?, ?, ?)";
+       return "insert into " + TABLE + "(protagonista, nome, apelido, nacionalidade, genero)  values (?, ?, ?, ?, ?)";
     }
 
     @Override
     public String getUpdateStatment() {
         
-        return "update " + TABLE + "set nome = ?, apelido = ?, nacionalidade = ?, genero = ? where id = ?";
+        return "update " + TABLE + "set protagonista = ?, nome = ?, apelido = ?, nacionalidade = ?, genero = ? where id = ?";
        
     }
 
     @Override
-    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, ProfissionalCinematografico e) {
+    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Ator e) {
         try {
 //            pstmt.setString(1, e.getNomeFantasia());
 //            // OR
@@ -60,40 +61,38 @@ public class ProfissionalCinematograficoDao extends Dao<ProfissionalCinematograf
 //            if (e.getId() != null) {
 //                pstmt.setLong(4, e.getId());
 //            }
-
-                pstmt.setString(1, e.getNome());
-                pstmt.setString(2, e.getApelido());
-                pstmt.setLong(3, e.getNacionalidade().getId());
-                pstmt.setString(4, e.getGenero());
+                pstmt.setBoolean(1, e.isProtagonista());
+                pstmt.setString(2, e.getNome());
+                pstmt.setString(3, e.getApelido());
+                pstmt.setLong(4, e.getNacionalidade().getId());
+                pstmt.setString(5, e.getGenero());
                 
                  if (e.getId() != null) {
-                    pstmt.setLong(5, e.getId());
+                    pstmt.setLong(6, e.getId());
         }
 
         } catch (SQLException ex) {
-            Logger.getLogger(ProfissionalCinematograficoDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AtorDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
     public String getFindByIdStatment() {
-         return "select id, nome, apelido, nacionalidade, genero"
-                + " from ProfissionalCinematografico where id = ?";
+         return "select id, protagonista, nome, apelido, nacionalidade, genero"
+                + " from Ator where id = ?";
     }
 
     @Override
     public String getFindAllStatment() {
     
-        return "select id, nome, apelido, nacionalidade, genero"
-                + " from ProfissionalCinematografico";
+        return "select id, protagonista, nome, apelido, nacionalidade, genero"
+                + " from Ator";
                 //+ " where exlcuido = false";
     }
 
     @Override
-    public ProfissionalCinematografico extractObject(ResultSet resultSet) {
+    public Ator extractObject(ResultSet resultSet) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
-
-
