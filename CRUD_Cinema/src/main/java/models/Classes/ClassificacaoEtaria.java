@@ -11,13 +11,13 @@ package models.Classes;
 public enum ClassificacaoEtaria {
     L("L"), DEZ("10"), DOZE("12"), QUARTORZE("14"), DEZESSEIS("16"), DEZOITO("18");
     
-    private String classificacaoEtaria;
+    private String descricao;
     
     ClassificacaoEtaria(String descricao) {
-        this.classificacaoEtaria = descricao;
+        this.descricao = descricao;
     }
     
     public String getDescricao() {
-        return classificacaoEtaria;
+        return descricao;
     }
 }

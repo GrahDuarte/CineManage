@@ -7,6 +7,7 @@ package com.mycompany.crud_cinema;
 import java.util.ArrayList;
 import models.Classes.Ator;
 import models.Classes.Cinema;
+import models.Classes.ClassificacaoEtaria;
 import models.Classes.Diretor;
 import models.Classes.Endereco;
 import models.Classes.Genero;
@@ -64,5 +65,6 @@ public class CRUD_Cinema {
         Genero genero = new Genero(null, "Ação");
         Long generoId = new GeneroDao().saveOrUpdate(genero);
         genero.setId(generoId);
+        String classificacao = ClassificacaoEtaria.L.toString();
     }
 }
