@@ -7,8 +7,10 @@ package com.mycompany.crud_cinema;
 import java.util.ArrayList;
 import models.Classes.Cinema;
 import models.Classes.Endereco;
+import models.Classes.Pais;
 import models.Daos.CinemaDao;
 import models.Daos.EnderecoDao;
+import models.Daos.PaisDao;
 //import models.Sala;
 
 /**
@@ -28,8 +30,8 @@ public class CRUD_Cinema {
 //        salas.add(sala2);
 
 //Salvar no banco de dados
-     Long enderecoId = new EnderecoDao().saveOrUpdate(endereco);
-     endereco.setId(enderecoId);
+//     Long enderecoId = new EnderecoDao().saveOrUpdate(endereco);
+//     endereco.setId(enderecoId);
  // Criando um objeto Cinema
         Cinema cinema = new Cinema(null, "CineCity", 1234567890L, endereco, 9876543210L, "CC");
         System.out.println("Nome Fantasia: " + cinema.getNomeFantasia());
@@ -40,8 +42,12 @@ public class CRUD_Cinema {
      //   System.out.println("Salas: " + cinema.getSalas());
      
      //Salvar no banco de dados
-//     Long enderecoId = new EnderecoDao.saveOrUpdate(cinema.getEndereco());
-     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
-     cinema.setId(cinemaId);
+//     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
+//     cinema.setId(cinemaId);
+
+        Pais pais = new Pais(null, "Brasil");
+        // Salvar Pais no banco
+//        Long paisId = new PaisDao().saveOrUpdate(pais);
+//        pais.setId(paisId);
     }
 }

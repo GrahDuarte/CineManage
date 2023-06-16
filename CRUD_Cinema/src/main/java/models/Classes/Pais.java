@@ -16,7 +16,8 @@ public class Pais extends Entity {
     public Pais() {
     }
 
-    public Pais(String nome) {
+    public Pais(Long id, String nome) {
+        setId(id);
         this.nome = nome;
     }
 
