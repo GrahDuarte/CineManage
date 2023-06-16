@@ -16,7 +16,8 @@ public class Genero extends Entity {
     public Genero() {
     }
 
-    public Genero(String principalGenero) {
+    public Genero(Long id, String principalGenero) {
+        setId(id);
         this.principalGenero = principalGenero;
     }
 

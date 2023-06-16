@@ -9,14 +9,14 @@ import models.Classes.Ator;
 import models.Classes.Cinema;
 import models.Classes.Diretor;
 import models.Classes.Endereco;
+import models.Classes.Genero;
 import models.Classes.Pais;
-import models.Classes.ProfissionalCinematografico;
 import models.Daos.AtorDao;
 import models.Daos.CinemaDao;
 import models.Daos.DiretorDao;
 import models.Daos.EnderecoDao;
+import models.Daos.GeneroDao;
 import models.Daos.PaisDao;
-import models.Daos.ProfissionalCinematograficoDao;
 //import models.Sala;
 
 /**
@@ -54,15 +54,15 @@ public class CRUD_Cinema {
         Pais pais = new Pais(null, "China");
 //        Ator ator = new Ator(true, null, "JK", "JK", pais, "Masculino");
         // Salvar Pais no banco
-        Long paisId = new PaisDao().saveOrUpdate(pais);
-        pais.setId(paisId);
-//        ProfissionalCinematografico profissional = new ProfissionalCinematografico(null, "JK", "JK", pais, "Masculino");
-//        Long profissionalId = new ProfissionalCinematograficoDao().saveOrUpdate(profissional);
-//        profissional.setId(profissionalId);
+//        Long paisId = new PaisDao().saveOrUpdate(pais);
+//        pais.setId(paisId);
 //        Long atorId = new AtorDao().saveOrUpdate(ator);
 //        ator.setId(atorId);
-        Diretor diretor = new Diretor(true, false, false, null, "JK", "JK", pais, "Masculino");
-        Long diretorId = new DiretorDao().saveOrUpdate(diretor);
-        diretor.setId(diretorId);
+//        Diretor diretor = new Diretor(true, false, false, null, "JK", "JK", pais, "Masculino");
+//        Long diretorId = new DiretorDao().saveOrUpdate(diretor);
+//        diretor.setId(diretorId);
+        Genero genero = new Genero(null, "Ação");
+        Long generoId = new GeneroDao().saveOrUpdate(genero);
+        genero.setId(generoId);
     }
 }
