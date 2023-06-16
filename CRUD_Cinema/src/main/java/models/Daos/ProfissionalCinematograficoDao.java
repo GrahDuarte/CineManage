@@ -9,37 +9,41 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import models.Classes.Pais;
+import models.Classes.ProfissionalCinematografico;
 import repository.Dao;
 
 /**
- * 
+ *
  * <code>
- * CREATE TABLE Pais (
+ * CREATE TABLE ProfissionalCinematografico (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100) UNIQUE NOT NULL
+    nome VARCHAR(100) NOT NULL,
+    apelido VARCHAR(100),
+    nacionalidade BIGINT UNSIGNED NOT NULL,
+    genero VARCHAR(100) NOT NULL,
+    FOREIGN KEY (nacionalidade) REFERENCES Pais(id)
 );
  * </code>
- * @author lorena
+ * @author loren
  */
-public class PaisDao extends Dao<Pais>{
+public class ProfissionalCinematograficoDao extends Dao<ProfissionalCinematografico>{
     
-    public static final String TABLE = "Pais";
+    public static final String TABLE = "ProfissionalCinematografico";
 
     @Override
     public String getSaveStatment() {
-       return "insert into " + TABLE + "(nome)  values (?)";
+       return "insert into " + TABLE + "(nome, apelido, nacionalidade, genero)  values (?, ?, ?, ?)";
     }
 
     @Override
     public String getUpdateStatment() {
         
-        return "update " + TABLE + "set nome = ? where id = ?";
+        return "update " + TABLE + "set nome = ?, apelido = ?, nacionalidade = ?, genero = ? where id = ?";
        
     }
 
     @Override
-    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, Pais e) {
+    public void composeSaveOrUpdateStatement(PreparedStatement pstmt, ProfissionalCinematografico e) {
         try {
 //            pstmt.setString(1, e.getNomeFantasia());
 //            // OR
@@ -58,34 +62,38 @@ public class PaisDao extends Dao<Pais>{
 //            }
 
                 pstmt.setString(1, e.getNome());
+                pstmt.setString(2, e.getApelido());
+                pstmt.setLong(3, e.getNacionalidade().getId());
+                pstmt.setString(4, e.getGenero());
                 
                  if (e.getId() != null) {
-                    pstmt.setLong(2, e.getId());
+                    pstmt.setLong(5, e.getId());
         }
 
         } catch (SQLException ex) {
-            Logger.getLogger(PaisDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProfissionalCinematograficoDao.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     @Override
     public String getFindByIdStatment() {
-         return "select id, nome"
-                + " from Pais where id = ?";
+         return "select id, nome, apelido, nacionalidade, genero"
+                + " from ProfissionalCinematografico where id = ?";
     }
 
     @Override
     public String getFindAllStatment() {
     
-        return "select id, nome"
-                + " from Pais";
+        return "select id, nome, apelido, nacionalidade, genero"
+                + " from ProfissionalCinematografico";
                 //+ " where exlcuido = false";
     }
 
     @Override
-    public Pais extractObject(ResultSet resultSet) {
+    public ProfissionalCinematografico extractObject(ResultSet resultSet) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
+
 

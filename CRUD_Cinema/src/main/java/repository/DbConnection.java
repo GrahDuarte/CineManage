@@ -38,7 +38,7 @@ public class DbConnection {
                 + "&serverTimezone=UTC"
                 + "&autoReconnect=true";
         USER = "freedb_pooif";
-        PASSWORD = "fX4wFPgKYP*2Vdu";
+        PASSWORD = "dGVmCKs7%rv88d6";
     }
 
     //<editor-fold defaultstate="collapsed" desc="Construtor privado">

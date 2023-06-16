@@ -8,9 +8,11 @@ import java.util.ArrayList;
 import models.Classes.Cinema;
 import models.Classes.Endereco;
 import models.Classes.Pais;
+import models.Classes.ProfissionalCinematografico;
 import models.Daos.CinemaDao;
 import models.Daos.EnderecoDao;
 import models.Daos.PaisDao;
+import models.Daos.ProfissionalCinematograficoDao;
 //import models.Sala;
 
 /**
@@ -45,9 +47,12 @@ public class CRUD_Cinema {
 //     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
 //     cinema.setId(cinemaId);
 
-        Pais pais = new Pais(null, "Brasil");
+//        Pais pais = new Pais(null, "EUA");
         // Salvar Pais no banco
 //        Long paisId = new PaisDao().saveOrUpdate(pais);
 //        pais.setId(paisId);
+//        ProfissionalCinematografico profissional = new ProfissionalCinematografico(null, "JK", "JK", pais, "Masculino");
+//        Long profissionalId = new ProfissionalCinematograficoDao().saveOrUpdate(profissional);
+//        profissional.setId(profissionalId);
     }
 }
