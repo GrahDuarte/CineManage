@@ -19,7 +19,8 @@ public class ProfissionalCinematografico extends Entity {
     public ProfissionalCinematografico() {
     }
 
-    public ProfissionalCinematografico(String nome, String apelido, Pais nacionalidade, String genero) {
+    public ProfissionalCinematografico(Long id, String nome, String apelido, Pais nacionalidade, String genero) {
+        setId(id);
         this.nome = nome;
         this.apelido = apelido;
         this.nacionalidade = nacionalidade;

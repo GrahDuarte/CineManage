@@ -15,10 +15,10 @@ public class Ator extends ProfissionalCinematografico {
         this.protagonista = protagonista;
     }
 
-    public Ator(boolean protagonista, String nome, String apelido, Pais nacionalidade, String genero) {
-        super(nome, apelido, nacionalidade, genero);
+    public Ator(boolean protagonista, Long id, String nome, String apelido, Pais nacionalidade, String genero) {
+        super(id, nome, apelido, nacionalidade, genero);
         this.protagonista = protagonista;
-    } 
+    }
 
     public boolean isProtagonista() {
         return protagonista;

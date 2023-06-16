@@ -19,8 +19,8 @@ public class Diretor extends ProfissionalCinematografico {
         this.arte = arte;
     }
 
-    public Diretor(boolean principal, boolean fotografia, boolean arte, String nome, String apelido, Pais nacionalidade, String genero) {
-        super(nome, apelido, nacionalidade, genero);
+    public Diretor(boolean principal, boolean fotografia, boolean arte, Long id, String nome, String apelido, Pais nacionalidade, String genero) {
+        super(id, nome, apelido, nacionalidade, genero);
         this.principal = principal;
         this.fotografia = fotografia;
         this.arte = arte;

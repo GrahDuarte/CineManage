@@ -41,7 +41,7 @@ package entity;
  */
 public abstract class Entity {
 
-    private Long id;
+    public Long id;
     private boolean excluded;
 
     public Long getId() {
