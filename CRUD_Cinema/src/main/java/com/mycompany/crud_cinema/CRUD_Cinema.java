@@ -18,6 +18,8 @@ import models.Daos.DiretorDao;
 import models.Daos.EnderecoDao;
 import models.Daos.GeneroDao;
 import models.Daos.PaisDao;
+import repository.Dao;
+import repository.DbConnection;
 //import models.Sala;
 
 /**
@@ -52,7 +54,7 @@ public class CRUD_Cinema {
 //     Long cinemaId = new CinemaDao().saveOrUpdate(cinema);
 //     cinema.setId(cinemaId);
 
-        Pais pais = new Pais(null, "China");
+//        Pais pais = new Pais(null, "China");
 //        Ator ator = new Ator(true, null, "JK", "JK", pais, "Masculino");
         // Salvar Pais no banco
 //        Long paisId = new PaisDao().saveOrUpdate(pais);
@@ -62,9 +64,9 @@ public class CRUD_Cinema {
 //        Diretor diretor = new Diretor(true, false, false, null, "JK", "JK", pais, "Masculino");
 //        Long diretorId = new DiretorDao().saveOrUpdate(diretor);
 //        diretor.setId(diretorId);
-        Genero genero = new Genero(null, "Ação");
-        Long generoId = new GeneroDao().saveOrUpdate(genero);
-        genero.setId(generoId);
-        String classificacao = ClassificacaoEtaria.L.toString();
+//        Genero genero = new Genero(null, "Ação");
+//        Long generoId = new GeneroDao().saveOrUpdate(genero);
+//        genero.setId(generoId);
+            
     }
 }

@@ -11,6 +11,9 @@ package models.Classes;
 public class Ator extends ProfissionalCinematografico {
     private boolean protagonista;
 
+    public Ator() {
+    }
+
     public Ator(boolean protagonista) {
         this.protagonista = protagonista;
     }

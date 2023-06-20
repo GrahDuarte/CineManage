@@ -19,12 +19,14 @@ public class Filme extends Entity {
     private boolean dublado;
     private ArrayList<Genero> generos;
     private Integer duracao;
-    private ArrayList<ProfissionalCinematografico> artista;
+    private ArrayList<ProfissionalCinematografico> artistas;
 
     public Filme() {
     }
+    
+    
 
-    public Filme(ClassificacaoEtaria classificacaoIndicativa, String tituloPortugues, String tituloOriginal, boolean legendado, boolean dublado, ArrayList<Genero> generos, Integer duracao, ArrayList<ProfissionalCinematografico> artista) {
+    public Filme(ClassificacaoEtaria classificacaoIndicativa, String tituloPortugues, String tituloOriginal, boolean legendado, boolean dublado, ArrayList<Genero> generos, Integer duracao, ArrayList<ProfissionalCinematografico> artistas) {
         this.classificacaoIndicativa = classificacaoIndicativa;
         this.tituloPortugues = tituloPortugues;
         this.tituloOriginal = tituloOriginal;
@@ -32,7 +34,7 @@ public class Filme extends Entity {
         this.dublado = dublado;
         this.generos = generos;
         this.duracao = duracao;
-        this.artista = artista;
+        this.artistas = artistas;
     }
 
     public ClassificacaoEtaria getClassificacaoIndicativa() {
@@ -91,11 +93,11 @@ public class Filme extends Entity {
         this.duracao = duracao;
     }
 
-    public ArrayList<ProfissionalCinematografico> getArtista() {
-        return artista;
+    public ArrayList<ProfissionalCinematografico> getArtistas() {
+        return artistas;
     }
 
-    public void setArtista(ArrayList<ProfissionalCinematografico> artista) {
-        this.artista = artista;
+    public void setArtistas(ArrayList<ProfissionalCinematografico> artistas) {
+        this.artistas = artistas;
     }   
 }

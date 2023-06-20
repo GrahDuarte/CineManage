@@ -24,7 +24,8 @@ import repository.Dao;
     principal BOOLEAN NOT NULL,
     fotografia BOOLEAN NOT NULL,
     arte BOOLEAN NOT NULL,
-    FOREIGN KEY (nacionalidade) REFERENCES Pais(id)
+    FOREIGN KEY (nacionalidade) REFERENCES Pais(id) ON DELETE CASCADE,
+    FOREIGN KEY (id) REFERENCES ProfissionalCinematografico(id) ON DELETE CASCADE;
 );
  * </code>
  * @author loren

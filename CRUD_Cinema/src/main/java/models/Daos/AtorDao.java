@@ -22,7 +22,8 @@ import repository.Dao;
     apelido VARCHAR(100),
     nacionalidade BIGINT UNSIGNED NOT NULL,
     genero VARCHAR(100) NOT NULL,
-    FOREIGN KEY (nacionalidade) REFERENCES Pais(id)
+    FOREIGN KEY (nacionalidade) REFERENCES Pais(id) ON DELETE CASCADE,
+    FOREIGN KEY (id) REFERENCES ProfissionalCinematografico(id) ON DELETE CASCADE;
 );
  * </code>
  * @author lorena

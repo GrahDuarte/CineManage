@@ -8,10 +8,17 @@ package models.Classes;
  *
  * @author lorena
  */
+
+
+
 public class Diretor extends ProfissionalCinematografico {
     private boolean principal;
     private boolean fotografia;
     private boolean arte;
+
+    
+    public Diretor() {  
+    }
 
     public Diretor(boolean principal, boolean fotografia, boolean arte) {
         this.principal = principal;
