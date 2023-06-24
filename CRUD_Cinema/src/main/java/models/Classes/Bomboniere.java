@@ -14,7 +14,7 @@ public class Bomboniere {
     private ArrayList<Produto> produto;
     private int venda;
 
-    public Sala() {
+    public Bomboniere() {
         produto = new Produto<>();
     }
 
