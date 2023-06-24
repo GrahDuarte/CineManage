@@ -48,7 +48,7 @@ public class Produto {
         this.tamanho = tamanho;
     }
 
-   public String getPreco() {
+   public BigDecimal getPreco() {
         return preco;
     }
 
