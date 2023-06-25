@@ -15,7 +15,7 @@ public class Bomboniere {
     private int venda;
 
     public Bomboniere() {
-        produto = new Produto<>();
+        produto = new ArrayList<>();
     }
 
     public Bomboniere(ArrayList<Produto> produto, int venda) {
@@ -23,12 +23,12 @@ public class Bomboniere {
         this.venda = venda;
     }
 
- public ArrayList<Produto> getProduto() {
+    public ArrayList<Produto> getProduto() {
         return produto;
     }
 
     public void setProduto(ArrayList<Produto> produto) {
-        this.produto = produto
+        this.produto = produto;
     }
 
     public int getVenda() {
@@ -49,5 +49,6 @@ public class Bomboniere {
     void venderProduto(){
 
     }
+}
 
    

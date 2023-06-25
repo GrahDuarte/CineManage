@@ -4,6 +4,8 @@
  */
 package models.Classes;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author Graciely Duarte
@@ -17,11 +19,11 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(String nome, String descricao, String tamanho, String preco) {
+    public Produto(String nome, String descricao, String tamanho, BigDecimal preco) {
         this.nome = nome;
         this.descricao = descricao;
         this.tamanho = tamanho;
-        this.preco = preco
+        this.preco = preco;
     }
 
  public String getNome() {
@@ -29,7 +31,7 @@ public class Produto {
     }
 
     public void setNome(String nome) {
-        this.nome = nome
+        this.nome = nome;
     }
 
     public String getDescricao() {
@@ -55,3 +57,4 @@ public class Produto {
     public void setPreco(BigDecimal preco) {
         this.preco = preco;
     }
+}

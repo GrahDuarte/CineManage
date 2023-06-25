@@ -18,7 +18,7 @@ public class Venda {
     private BigDecimal precoTotal;
 
     public Venda() {
-        produto = new Produto<>();
+        produto = new ArrayList<>();
     }
 
     public Venda(ArrayList<Produto> produto, LocalDateTime emissaoDaVenda, BigDecimal precoTotal) {
@@ -50,3 +50,4 @@ public class Venda {
     public void setPrecoTotal(BigDecimal precoTotal) {
         this.precoTotal = precoTotal;
     }
+}
