@@ -65,9 +65,9 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
         txtGenero = new javax.swing.JTextField();
         chkAtor = new javax.swing.JCheckBox();
         pnlDiretor2 = new javax.swing.JPanel();
-        chkPrincipal2 = new javax.swing.JCheckBox();
-        chkFotografia2 = new javax.swing.JCheckBox();
-        chkArte2 = new javax.swing.JCheckBox();
+        chkPrincipal = new javax.swing.JCheckBox();
+        chkFotografia = new javax.swing.JCheckBox();
+        chkArte = new javax.swing.JCheckBox();
         btnSalvar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         lstArtista = new javax.swing.JList<>();
@@ -75,6 +75,7 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
         pnlAtor = new javax.swing.JPanel();
         chkProtagonista = new javax.swing.JCheckBox();
         chkDiretor = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -90,11 +91,11 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
 
         chkAtor.setText("Ator");
 
-        chkPrincipal2.setText("Principal");
+        chkPrincipal.setText("Principal");
 
-        chkFotografia2.setText("Fotografia");
+        chkFotografia.setText("Fotografia");
 
-        chkArte2.setText("Arte");
+        chkArte.setText("Arte");
 
         javax.swing.GroupLayout pnlDiretor2Layout = new javax.swing.GroupLayout(pnlDiretor2);
         pnlDiretor2.setLayout(pnlDiretor2Layout);
@@ -103,20 +104,20 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
             .addGroup(pnlDiretor2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlDiretor2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chkPrincipal2)
-                    .addComponent(chkFotografia2)
-                    .addComponent(chkArte2))
+                    .addComponent(chkPrincipal)
+                    .addComponent(chkFotografia)
+                    .addComponent(chkArte))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlDiretor2Layout.setVerticalGroup(
             pnlDiretor2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDiretor2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(chkPrincipal2)
+                .addComponent(chkPrincipal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chkFotografia2)
+                .addComponent(chkFotografia)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(chkArte2)
+                .addComponent(chkArte)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -152,26 +153,26 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
 
         chkDiretor.setText("Diretor");
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Cadastro de Artistas");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 652, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(7, 7, 7)
+                                .addGap(1, 1, 1)
                                 .addComponent(lblNome, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblApelido))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblApelido)
+                            .addComponent(lblPais, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNome)
@@ -183,11 +184,6 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
                                 .addGap(22, 22, 22)
                                 .addComponent(txtGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(pnlDiretor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(chkDiretor)
                                 .addGap(149, 149, 149)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -195,13 +191,20 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
                                         .addGap(21, 21, 21)
                                         .addComponent(pnlAtor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(chkAtor))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(83, 83, 83)
+                                .addComponent(pnlDiretor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblNome))
@@ -220,17 +223,14 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
                     .addComponent(chkDiretor)
                     .addComponent(chkAtor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(pnlDiretor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(pnlAtor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlAtor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
-                .addGap(7, 7, 7))
+                        .addComponent(pnlDiretor2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -293,17 +293,12 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
     private javax.swing.JButton btnSalvar;
     private javax.swing.JComboBox<Pais> cbxPais;
     private javax.swing.JCheckBox chkArte;
-    private javax.swing.JCheckBox chkArte1;
-    private javax.swing.JCheckBox chkArte2;
     private javax.swing.JCheckBox chkAtor;
     private javax.swing.JCheckBox chkDiretor;
     private javax.swing.JCheckBox chkFotografia;
-    private javax.swing.JCheckBox chkFotografia1;
-    private javax.swing.JCheckBox chkFotografia2;
     private javax.swing.JCheckBox chkPrincipal;
-    private javax.swing.JCheckBox chkPrincipal1;
-    private javax.swing.JCheckBox chkPrincipal2;
     private javax.swing.JCheckBox chkProtagonista;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblApelido;
@@ -312,8 +307,6 @@ public class CadastroArtista extends javax.swing.JInternalFrame {
     private javax.swing.JLabel lblPais;
     private javax.swing.JList<String> lstArtista;
     private javax.swing.JPanel pnlAtor;
-    private javax.swing.JPanel pnlDiretor;
-    private javax.swing.JPanel pnlDiretor1;
     private javax.swing.JPanel pnlDiretor2;
     private javax.swing.JTextField txtApelido;
     private javax.swing.JTextField txtGenero;

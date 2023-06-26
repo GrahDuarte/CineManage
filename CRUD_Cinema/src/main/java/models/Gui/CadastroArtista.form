@@ -40,31 +40,24 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jScrollPane1" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                      <Component id="jLabel1" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="1" pref="652" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                   <Component id="lblNome" min="-2" pref="37" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblApelido" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="lblPais" min="-2" pref="44" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="lblApelido" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblPais" alignment="0" min="-2" pref="44" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtNome" max="32767" attributes="0"/>
                               <Component id="txtApelido" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="cbxPais" min="-2" pref="161" max="-2" attributes="0"/>
                                   <EmptySpace pref="118" max="32767" attributes="0"/>
                                   <Component id="lblGenero" min="-2" max="-2" attributes="0"/>
@@ -72,22 +65,22 @@
                                   <Component id="txtGenero" min="-2" pref="248" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Component id="pnlDiretor2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btnSalvar" min="-2" pref="105" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
                                   <Component id="chkDiretor" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="21" pref="21" max="-2" attributes="0"/>
                                           <Component id="pnlAtor" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="chkAtor" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                                  <Component id="pnlDiretor2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="btnSalvar" min="-2" pref="105" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -99,6 +92,8 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="txtNome" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -122,20 +117,16 @@
                       <Component id="chkAtor" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="pnlDiretor2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="31" pref="31" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="pnlAtor" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="pnlAtor" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                           <Component id="btnSalvar" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="pnlDiretor2" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jScrollPane1" pref="173" max="32767" attributes="0"/>
-                  <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="198" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -185,9 +176,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="chkPrincipal2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkFotografia2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="chkArte2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkPrincipal" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkFotografia" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkArte" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -197,28 +188,28 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="chkPrincipal2" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkPrincipal" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="chkFotografia2" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkFotografia" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="chkArte2" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkArte" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JCheckBox" name="chkPrincipal2">
+            <Component class="javax.swing.JCheckBox" name="chkPrincipal">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Principal"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkFotografia2">
+            <Component class="javax.swing.JCheckBox" name="chkFotografia">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Fotografia"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkArte2">
+            <Component class="javax.swing.JCheckBox" name="chkArte">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Arte"/>
               </Properties>
@@ -285,6 +276,15 @@
         <Component class="javax.swing.JCheckBox" name="chkDiretor">
           <Properties>
             <Property name="text" type="java.lang.String" value="Diretor"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="18" style="1"/>
+            </Property>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Cadastro de Artistas"/>
           </Properties>
         </Component>
       </SubComponents>
