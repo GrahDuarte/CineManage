@@ -32,13 +32,13 @@ public class DbConnection {
     // Static initialization
     static {
         // Local server
-        URL = "jdbc:mysql://127.0.0.1:3306/" + Dao.DB
+        URL = "jdbc:mysql://sql.freedb.tech:3306/" + Dao.DB
                 + "?useUnicode=true"
                 + "&useJDBCCompliantTimezoneShift=true"
                 + "&serverTimezone=UTC"
                 + "&autoReconnect=true";
-        USER = "root";
-        PASSWORD = "";
+        USER = "freedb_pooif";
+        PASSWORD = "&SFc*Hn*mKHSH?7";
     }
 
     //<editor-fold defaultstate="collapsed" desc="Construtor privado">
